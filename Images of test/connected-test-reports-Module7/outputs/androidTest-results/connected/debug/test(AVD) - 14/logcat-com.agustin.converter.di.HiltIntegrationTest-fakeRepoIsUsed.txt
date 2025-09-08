@@ -1,0 +1,5 @@
+09-08 02:11:27.391  5020  5126 I TestRunner: started: fakeRepoIsUsed(com.agustin.converter.di.HiltIntegrationTest)
+09-08 02:11:28.080  5020  5126 W ustin.converter: Verification of kotlin.enums.EnumEntries kotlin.enums.EnumEntriesKt.enumEntries(kotlin.jvm.functions.Function0) took 105.119ms (180.75 bytecodes/s) (1712B approximate peak alloc)
+09-08 02:11:28.218   538   581 W system_server: Long monitor contention with owner android.fg (563) at boolean android.os.MessageQueue.enqueueMessage(android.os.Message, long)(MessageQueue.java:600) waiters=0 in android.os.Message android.os.MessageQueue.next() for 222ms
+09-08 02:11:28.346  1103  1109 I ndroid.systemui: Background young concurrent copying GC freed 527341(24MB) AllocSpace objects, 0(0B) LOS objects, 51% free, 18MB/37MB, paused 596.264ms,538us total 6.695s
+09-08 02:11:28.724  5020  5126 I TestRunner: finished: fakeRepoIsUsed(com.agustin.converter.di.HiltIntegrationTest)

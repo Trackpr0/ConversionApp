@@ -1,0 +1,27 @@
+INFO: Constructing runner from config.
+INFO: Configuring Android Instrumentation driver: android_instrumentation_runtime {
+  instrumentation_info {
+    app_package: "com.agustin.converter"
+    test_package: "com.agustin.converter.test"
+    test_runner_class: "com.agustin.converter.HiltTestRunner"
+  }
+  instrumentation_args {
+    args_map {
+      key: "additionalTestOutputDir"
+      value: "/sdcard/Android/media/com.agustin.converter/additional_test_output"
+    }
+  }
+}
+am_instrument_timeout: 31536000
+
+INFO: No installables found in test fixture. Nothing to install.
+INFO: Installing [/Users/runner/work/ConversionApp/ConversionApp/app/build/outputs/apk/debug/app-debug.apk] on device emulator-5554.
+INFO: Installing [/Users/runner/work/ConversionApp/ConversionApp/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk] on device emulator-5554.
+INFO: Start logcat streaming.
+INFO: Running Android Instrumentation driver.
+INFO: Stop logcat streaming.
+INFO: Uninstalling com.agustin.converter for device emulator-5554.
+INFO: Uninstalling com.agustin.converter.test for device emulator-5554.
+INFO: Execute com.agustin.converter.ExampleInstrumentedTest.useAppContext: PASSED
+INFO: Execute com.agustin.converter.di.HiltIntegrationTest.fakeRepoIsUsed: PASSED
+INFO: Execute com.agustin.converter.ui.ComposeConversionTest.convertsCelsiusToFahrenheit_defaultDropdowns: PASSED

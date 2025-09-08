@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.agustin.converter.domain.UnitTypesTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-09-08T01:28:19" hostname="pkrvm7jw40e0xgp" time="0.018">
+  <properties/>
+  <testcase name="m_to_ft_and_back" classname="com.agustin.converter.domain.UnitTypesTest" time="0.005"/>
+  <testcase name="kg_lb_roundtrip" classname="com.agustin.converter.domain.UnitTypesTest" time="0.001"/>
+  <testcase name="cannot_mix_categories" classname="com.agustin.converter.domain.UnitTypesTest" time="0.008"/>
+  <testcase name="c_to_f_and_back" classname="com.agustin.converter.domain.UnitTypesTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

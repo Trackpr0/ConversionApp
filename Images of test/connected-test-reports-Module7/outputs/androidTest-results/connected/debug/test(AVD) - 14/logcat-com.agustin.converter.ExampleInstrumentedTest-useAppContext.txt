@@ -1,0 +1,2 @@
+09-08 02:11:27.096  5020  5126 I TestRunner: started: useAppContext(com.agustin.converter.ExampleInstrumentedTest)
+09-08 02:11:27.173  5020  5126 I TestRunner: finished: useAppContext(com.agustin.converter.ExampleInstrumentedTest)

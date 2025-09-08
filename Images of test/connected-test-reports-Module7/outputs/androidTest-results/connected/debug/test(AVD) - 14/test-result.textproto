@@ -1,0 +1,172 @@
+# 2025-09-08T02:12:44.543852Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 3
+}
+test_status: PASSED
+test_result {
+  test_case {
+    test_class: "ExampleInstrumentedTest"
+    test_package: "com.agustin.converter"
+    test_method: "useAppContext"
+    start_time {
+      seconds: 1757297491
+      nanos: 710000000
+    }
+    end_time {
+      seconds: 1757297491
+      nanos: 794000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/runner/work/ConversionApp/ConversionApp/app/build/outputs/androidTest-results/connected/debug/test(AVD) - 14/logcat-com.agustin.converter.ExampleInstrumentedTest-useAppContext.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/runner/work/ConversionApp/ConversionApp/app/build/outputs/androidTest-results/connected/debug/test(AVD) - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/runner/work/ConversionApp/ConversionApp/app/build/outputs/androidTest-results/connected/debug/test(AVD) - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/runner/work/ConversionApp/ConversionApp/app/build/outputs/androidTest-results/connected/debug/test(AVD) - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "HiltIntegrationTest"
+    test_package: "com.agustin.converter.di"
+    test_method: "fakeRepoIsUsed"
+    start_time {
+      seconds: 1757297492
+      nanos: 53000000
+    }
+    end_time {
+      seconds: 1757297493
+      nanos: 460000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/runner/work/ConversionApp/ConversionApp/app/build/outputs/androidTest-results/connected/debug/test(AVD) - 14/logcat-com.agustin.converter.di.HiltIntegrationTest-fakeRepoIsUsed.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/runner/work/ConversionApp/ConversionApp/app/build/outputs/androidTest-results/connected/debug/test(AVD) - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/runner/work/ConversionApp/ConversionApp/app/build/outputs/androidTest-results/connected/debug/test(AVD) - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/runner/work/ConversionApp/ConversionApp/app/build/outputs/androidTest-results/connected/debug/test(AVD) - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ComposeConversionTest"
+    test_package: "com.agustin.converter.ui"
+    test_method: "convertsCelsiusToFahrenheit_defaultDropdowns"
+    start_time {
+      seconds: 1757297493
+      nanos: 881000000
+    }
+    end_time {
+      seconds: 1757297555
+      nanos: 96000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/runner/work/ConversionApp/ConversionApp/app/build/outputs/androidTest-results/connected/debug/test(AVD) - 14/logcat-com.agustin.converter.ui.ComposeConversionTest-convertsCelsiusToFahrenheit_defaultDropdowns.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/runner/work/ConversionApp/ConversionApp/app/build/outputs/androidTest-results/connected/debug/test(AVD) - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/runner/work/ConversionApp/ConversionApp/app/build/outputs/androidTest-results/connected/debug/test(AVD) - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/runner/work/ConversionApp/ConversionApp/app/build/outputs/androidTest-results/connected/debug/test(AVD) - 14/cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "/Users/runner/work/ConversionApp/ConversionApp/app/build/outputs/androidTest-results/connected/debug/test(AVD) - 14/testlog/test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}
