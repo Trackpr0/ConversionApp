@@ -4,7 +4,6 @@ plugins {
     id("org.jetbrains.kotlin.kapt")
     id("com.google.dagger.hilt.android")
     id("jacoco")
-    id("org.jetbrains.kotlinx.kover") version "0.8.3"  
 }
 
 android {
@@ -59,7 +58,7 @@ dependencies {
     implementation("androidx.activity:activity-compose:1.9.0")
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3:1.2.1")
+    implementation("androidx.compose.material3:material3:1.2.1") // keep 1.2.x for menuAnchor()
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
@@ -100,28 +99,39 @@ kapt {
     correctErrorTypes = true
 }
 
-/* ---------- JaCoCo coverage for local unit tests (optional) ---------- */
+/* ---------- JaCoCo coverage for unit tests ---------- */
 jacoco {
     toolVersion = "0.8.10"
 }
+
 tasks.withType<Test>().configureEach {
     extensions.configure(org.gradle.testing.jacoco.plugins.JacocoTaskExtension::class) {
         isIncludeNoLocationClasses = true
         excludes = listOf("jdk.internal.*")
     }
 }
+
 tasks.register<org.gradle.testing.jacoco.tasks.JacocoReport>("jacocoTestReport") {
     dependsOn("testDebugUnitTest")
+
     reports {
         xml.required.set(true)
         html.required.set(true)
     }
+
     val debugTree = fileTree("${buildDir}/tmp/kotlin-classes/debug") {
         exclude(
-            "**/R.class", "**/R$*.class", "**/BuildConfig.*", "**/Manifest*.*",
-            "**/*_Factory.*", "**/*MembersInjector*.*", "**/Hilt_*.*", "**/di/**"
+            "**/R.class",
+            "**/R$*.class",
+            "**/BuildConfig.*",
+            "**/Manifest*.*",
+            "**/*_Factory.*",
+            "**/*MembersInjector*.*",
+            "**/Hilt_*.*",
+            "**/di/**"
         )
     }
+
     classDirectories.setFrom(files(debugTree))
     sourceDirectories.setFrom(files("src/main/java", "src/main/kotlin"))
     executionData.setFrom(
@@ -132,24 +142,4 @@ tasks.register<org.gradle.testing.jacoco.tasks.JacocoReport>("jacocoTestReport")
             )
         }
     )
-}
-
-/* ---------- Kover (used by CI) ---------- */
-kover {
-    reports {
-        html.required.set(true)
-        xml.required.set(true)
-        filters {
-            excludes {
-                classes(
-                    // generated / DI
-                    "com.agustin.converter.BuildConfig",
-                    "dagger.**",
-                    "dagger.hilt.**",
-                    "hilt_aggregated_deps.**",
-                    "com.agustin.converter.di.*"
-                )
-            }
-        }
-    }
 }
