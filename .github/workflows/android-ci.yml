@@ -17,6 +17,13 @@ jobs:
           distribution: temurin
           java-version: '17'
 
+      # Install Android SDK + accept licenses
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install SDK packages
+        run: sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
+
       - name: Gradle cache
         uses: gradle/actions/setup-gradle@v4
 
@@ -24,7 +31,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Run unit tests
-        run: ./gradlew :app:testDebugUnitTest --stacktrace
+        run: ./gradlew :app:testDebugUnitTest --stacktrace --no-daemon
 
       - name: Upload unit test reports
         if: always()
